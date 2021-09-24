@@ -425,7 +425,6 @@ function create() {
     gameState.chop_mark_5.setPosition('580', '150')
     gameState.placeholder = 'sliced_lamb'
 
-
   })
 
   gameState.jar_P.on('pointerdown', function (pointer) {
@@ -435,7 +434,7 @@ function create() {
     gameState.chop_mark_5.setPosition('510', '290')
     gameState.placeholder = 'sliced_pork'
 
-  }).setVisible(true).setInteractive()
+  })
 
   gameState.jar_S.on('pointerdown', function (pointer) {
     jars_info()
@@ -527,8 +526,6 @@ function create() {
     tray_gummy_bears.setVisible(true)
     tray_sponge.setVisible(true)
   }
-  // We will remove this once we fix jar_P's bug
-  gameState.jar_P.setVisible(false)
 }
 
 function update() {
