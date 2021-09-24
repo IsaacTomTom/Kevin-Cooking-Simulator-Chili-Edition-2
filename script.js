@@ -8,113 +8,113 @@ const gameState = {
 function preload() {
 
   //Start screen images
-  this.load.image('title_screen', 'start_assets/title.png');
-  this.load.image('start', 'start_assets/start.png');
+  this.load.image('title_screen', 'all_images_assets/start_assets/title.png');
+  this.load.image('start', 'all_images_assets/start_assets/start.png');
 
   //order station related images
-  this.load.image('order_screen', 'order_assets/order.png');
-  this.load.image('counter', 'order_assets/counter.png');
-  this.load.image('menu', 'order_assets/menu.png');
-  this.load.image('speech', 'order_assets/bubble_R.png');
-  this.load.image('cook', 'order_assets/cook.png');
+  this.load.image('order_screen', 'all_images_assets/order_assets/order.png');
+  this.load.image('counter', 'all_images_assets/order_assets/counter.png');
+  this.load.image('menu', 'all_images_assets/order_assets/menu.png');
+  this.load.image('speech', 'all_images_assets/order_assets/bubble_R.png');
+  this.load.image('cook', 'all_images_assets/order_assets/cook.png');
 
   //customer kevin possible outfits
-  this.load.image('joker_kevin', 'customer_assets/joker_kevin.png');
-  this.load.image('kevin_man', 'customer_assets/kevin_man.png');
-  this.load.image('hair_kevin', 'customer_assets/hair_kevin.png');
-  this.load.image('stare_kevin', 'customer_assets/stare_kevin.png');
+  this.load.image('joker_kevin', 'all_images_assets/customer_assets/joker_kevin.png');
+  this.load.image('kevin_man', 'all_images_assets/customer_assets/kevin_man.png');
+  this.load.image('hair_kevin', 'all_images_assets/customer_assets/hair_kevin.png');
+  this.load.image('stare_kevin', 'all_images_assets/customer_assets/stare_kevin.png');
 
 
   //images for all 6 meat types
-  this.load.image('chicken', 'menu_assets/meat/chicken.png');
-  this.load.image('ground_beef', 'menu_assets/meat/beef.png');
-  this.load.image('pork', 'menu_assets/meat/pork.png');
-  this.load.image('fish', 'menu_assets/meat/fish.png');
-  this.load.image('lamb', 'menu_assets/meat/lamb.png');
-  this.load.image('steak', 'menu_assets/meat/steak.png');
+  this.load.image('chicken', 'all_images_assets/menu_assets/meat/chicken.png');
+  this.load.image('ground_beef', 'all_images_assets/menu_assets/meat/beef.png');
+  this.load.image('pork', 'all_images_assets/menu_assets/meat/pork.png');
+  this.load.image('fish', 'all_images_assets/menu_assets/meat/fish.png');
+  this.load.image('lamb', 'all_images_assets/menu_assets/meat/lamb.png');
+  this.load.image('steak', 'all_images_assets/menu_assets/meat/steak.png');
 
   //images for all 6 noodle types
-  this.load.image('macaroni', 'menu_assets/noodle/macaroni.png');
-  this.load.image('spaghetti', 'menu_assets/noodle/spag.png');
-  this.load.image('fettuccine', 'menu_assets/noodle/fett.png');
-  this.load.image('lasagna_noodles', 'menu_assets/noodle/Rav.png');
-  this.load.image('linguine', 'menu_assets/noodle/lin.png');
-  this.load.image('ramen_noodles', 'menu_assets/noodle/ramen.png');
+  this.load.image('macaroni', 'all_images_assets/menu_assets/noodle/macaroni.png');
+  this.load.image('spaghetti', 'all_images_assets/menu_assets/noodle/spag.png');
+  this.load.image('fettuccine', 'all_images_assets/menu_assets/noodle/fett.png');
+  this.load.image('lasagna_noodles', 'all_images_assets/menu_assets/noodle/Rav.png');
+  this.load.image('linguine', 'all_images_assets/menu_assets/noodle/lin.png');
+  this.load.image('ramen_noodles', 'all_images_assets/menu_assets/noodle/ramen.png');
 
   //images for all 6 bean types
-  this.load.image('baked_beans', 'menu_assets/bean/bakebeans.png');
-  this.load.image('kidney_beans', 'menu_assets/bean/kidney.png');
-  this.load.image('lima_beans', 'menu_assets/bean/lima.png');
-  this.load.image('green_beans', 'menu_assets/bean/green.png');
-  this.load.image('coffee_beans', 'menu_assets/bean/coffee.png');
-  this.load.image('jelly_beans', 'menu_assets/bean/Jelly.png');
+  this.load.image('baked_beans', 'all_images_assets/menu_assets/bean/bakebeans.png');
+  this.load.image('kidney_beans', 'all_images_assets/menu_assets/bean/kidney.png');
+  this.load.image('lima_beans', 'all_images_assets/menu_assets/bean/lima.png');
+  this.load.image('green_beans', 'all_images_assets/menu_assets/bean/green.png');
+  this.load.image('coffee_beans', 'all_images_assets/menu_assets/bean/coffee.png');
+  this.load.image('jelly_beans', 'all_images_assets/menu_assets/bean/Jelly.png');
 
   //images for all 6 sauce types
-  this.load.image('tomato_sauce', 'menu_assets/sauce/tomato.png');
-  this.load.image('mustard', 'menu_assets/sauce/mustard.png');
-  this.load.image('mayo', 'menu_assets/sauce/mayo.png');
-  this.load.image('yum_yum', 'menu_assets/sauce/yum.png');
-  this.load.image('apple_sauce', 'menu_assets/sauce/apple.png');
-  this.load.image('sus', 'menu_assets/sauce/sussy.png');
+  this.load.image('tomato_sauce', 'all_images_assets/menu_assets/sauce/tomato.png');
+  this.load.image('mustard', 'all_images_assets/menu_assets/sauce/mustard.png');
+  this.load.image('mayo', 'all_images_assets/menu_assets/sauce/mayo.png');
+  this.load.image('yum_yum', 'all_images_assets/menu_assets/sauce/yum.png');
+  this.load.image('apple_sauce', 'all_images_assets/menu_assets/sauce/apple.png');
+  this.load.image('sus', 'all_images_assets/menu_assets/sauce/sussy.png');
 
   //images for all 6 topping types
-  this.load.image('cheese', 'menu_assets/topping/cheese.png');
-  this.load.image('gummy_bears', 'menu_assets/topping/gummi.png');
-  this.load.image('radioactive_material', 'menu_assets/topping/fallout.png');
-  this.load.image('butter', 'menu_assets/topping/butter.png');
-  this.load.image('sus_meat', 'menu_assets/topping/dog.png');
-  this.load.image('sponge', 'menu_assets/topping/sponge.png');
+  this.load.image('cheese', 'all_images_assets/menu_assets/topping/cheese.png');
+  this.load.image('gummy_bears', 'all_images_assets/menu_assets/topping/gummi.png');
+  this.load.image('radioactive_material', 'all_images_assets/menu_assets/topping/fallout.png');
+  this.load.image('butter', 'all_images_assets/menu_assets/topping/butter.png');
+  this.load.image('sus_meat', 'all_images_assets/menu_assets/topping/dog.png');
+  this.load.image('sponge', 'all_images_assets/menu_assets/topping/sponge.png');
 
   //images for the 3 bowl sizes
-  this.load.image('large', 'menu_assets/bowl/bowl_L.png');
-  this.load.image('medium', 'menu_assets/bowl/bowl_M.png');
-  this.load.image('small', 'menu_assets/bowl/bowl_S.png');
+  this.load.image('large', 'all_images_assets/menu_assets/bowl/bowl_L.png');
+  this.load.image('medium', 'all_images_assets/menu_assets/bowl/bowl_M.png');
+  this.load.image('small', 'all_images_assets/menu_assets/bowl/bowl_S.png');
 
   //meat freezer images
-  this.load.image('jar_C', 'jar_assets/jar_C.png');
-  this.load.image('jar_F', 'jar_assets/jar_F.png');
-  this.load.image('jar_GB', 'jar_assets/jar_GB.png');
-  this.load.image('jar_L', 'jar_assets/jar_L.png');
-  this.load.image('jar_P', 'jar_assets/jar_P.png');
-  this.load.image('jar_S', 'jar_assets/jar_S.png')
-  this.load.image('freezer', 'ingredients_assets/freezer.png');
+  this.load.image('jar_C', 'all_images_assets/jar_assets/jar_C.png');
+  this.load.image('jar_F', 'all_images_assets/jar_assets/jar_F.png');
+  this.load.image('jar_GB', 'all_images_assets/jar_assets/jar_GB.png');
+  this.load.image('jar_L', 'all_images_assets/jar_assets/jar_L.png');
+  this.load.image('jar_P', 'all_images_assets/jar_assets/jar_P.png');
+  this.load.image('jar_S', 'all_images_assets/jar_assets/jar_S.png')
+  this.load.image('freezer', 'all_images_assets/ingredients_assets/freezer.png');
 
   //images for each star rating
-  this.load.image('0_star', 'star_system_assets/0-star.png');
-  this.load.image('1_star', 'star_system_assets/1-star.png');
-  this.load.image('2_star', 'star_system_assets/2-star.png');
-  this.load.image('3_star', 'star_system_assets/3-star.png');
-  this.load.image('4_star', 'star_system_assets/4-star.png');
-  this.load.image('5_star', 'star_system_assets/5-star.png');
+  this.load.image('0_star', 'all_images_assets/star_system_assets/0-star.png');
+  this.load.image('1_star', 'all_images_assets/star_system_assets/1-star.png');
+  this.load.image('2_star', 'all_images_assets/star_system_assets/2-star.png');
+  this.load.image('3_star', 'all_images_assets/star_system_assets/3-star.png');
+  this.load.image('4_star', 'all_images_assets/star_system_assets/4-star.png');
+  this.load.image('5_star', 'all_images_assets/star_system_assets/5-star.png');
 
 
   //imgaes for chopping station
-  this.load.image('cutting_board', 'cutting_assets/chop_chop.png');
-  this.load.image('radical', 'cutting_assets/radical.png');
-  this.load.image('check_mark', 'cutting_assets/chop_complete.png');
-  this.load.image('cutting_knife', 'cutting_assets/sword.png');
-  this.load.image('continue', 'cutting_assets/continue.png');
+  this.load.image('cutting_board', 'all_images_assets/cutting_assets/chop_chop.png');
+  this.load.image('radical', 'all_images_assets/cutting_assets/radical.png');
+  this.load.image('check_mark', 'all_images_assets/cutting_assets/chop_complete.png');
+  this.load.image('cutting_knife', 'all_images_assets/cutting_assets/sword.png');
+  this.load.image('continue', 'all_images_assets/cutting_assets/continue.png');
 
   //images for all 6 meats on the cutting board
-  this.load.image('cut_chicken', 'cutting_assets/cut_bird.png');
-  this.load.image('cut_fish', 'cutting_assets/cut_fish.png');
-  this.load.image('cut_ground_beef', 'cutting_assets/cut_beef.png');
-  this.load.image('cut_lamb', 'cutting_assets/cut_lamb.png');
-  this.load.image('cut_pork', 'cutting_assets/cut_pork.png');
-  this.load.image('cut_steak', 'cutting_assets/cut_steak.png');
+  this.load.image('cut_chicken', 'all_images_assets/cutting_assets/cut_bird.png');
+  this.load.image('cut_fish', 'all_images_assets/cutting_assets/cut_fish.png');
+  this.load.image('cut_ground_beef', 'all_images_assets/cutting_assets/cut_beef.png');
+  this.load.image('cut_lamb', 'all_images_assets/cutting_assets/cut_lamb.png');
+  this.load.image('cut_pork', 'all_images_assets/cutting_assets/cut_pork.png');
+  this.load.image('cut_steak', 'all_images_assets/cutting_assets/cut_steak.png');
 
   //images for all 6 meats after they have been sliced
-  this.load.image('sliced_pork', 'sliced_assets/slice_pork.png');
-  this.load.image('sliced_steak', 'sliced_assets/sliced_steak.png');
-  this.load.image('sliced_beef', 'sliced_assets/slice_beef.png');
-  this.load.image('sliced_bird', 'sliced_assets/slice_bird.png');
-  this.load.image('sliced_lamb', 'sliced_assets/sliced_lamb.png');
-  this.load.image('sliced_fish', 'sliced_assets/slice_fish.png')
+  this.load.image('sliced_pork', 'all_images_assets/sliced_assets/slice_pork.png');
+  this.load.image('sliced_steak', 'all_images_assets/sliced_assets/sliced_steak.png');
+  this.load.image('sliced_beef', 'all_images_assets/sliced_assets/slice_beef.png');
+  this.load.image('sliced_bird', 'all_images_assets/sliced_assets/slice_bird.png');
+  this.load.image('sliced_lamb', 'all_images_assets/sliced_assets/sliced_lamb.png');
+  this.load.image('sliced_fish', 'all_images_assets/sliced_assets/slice_fish.png')
 
   //images for the ingedients screen
-  this.load.image('counter_top', 'ingredients_assets/counter_top.png');
-  this.load.image('food_tray', 'ingredients_assets/food_tray.png');
-  this.load.image('bowl', 'ingredients_assets/pot.png');
+  this.load.image('counter_top', 'all_images_assets/ingredients_assets/counter_top.png');
+  this.load.image('food_tray', 'all_images_assets/ingredients_assets/food_tray.png');
+  this.load.image('bowl', 'all_images_assets/ingredients_assets/pot.png');
 
   //audio files
   this.load.audio('music', ['music_assets/start.mp3']);
