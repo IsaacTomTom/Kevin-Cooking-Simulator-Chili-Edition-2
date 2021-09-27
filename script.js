@@ -138,14 +138,10 @@ function create() {
 
   // this code section is for the random kevin customer ... will add more kevin types later on
   let kevin_list = []
-  let joker_kevin = 'joker_kevin'
-  let kevin_man = 'kevin_man'
-  let hair_kevin = 'hair_kevin'
-  let stare_kevin = 'stare_kevin'
-  kevin_list.push(joker_kevin)
-  kevin_list.push(kevin_man)
-  kevin_list.push(hair_kevin)
-  kevin_list.push(stare_kevin)
+  kevin_list.push('joker_kevin')
+  kevin_list.push('kevin_man')
+  kevin_list.push('hair_kevin')
+  kevin_list.push('stare_kevin')
   gameState.randomCustomer = Phaser.Utils.Array.GetRandom(kevin_list)
 
 
