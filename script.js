@@ -473,7 +473,7 @@ function create() {
     visible_trays()
     gameState.pot.setVisible(true)
   })
-
+  }
 
   // a function for things the jars need
   function jars_info() {
