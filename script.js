@@ -1,12 +1,14 @@
 /* Disclaimer: We know we should add multiple things of text for the menu and tray to tell what something is, we are just waiting till we can actually start making new code again.
+Also we've been trying to fix loading times. 
 */
 
 const gameState = {
 
 };
 
-function preload() {
 
+
+function preload(){
   //Start screen images
   this.load.image('title_screen', 'all_images_assets/start_assets/title.png');
   this.load.image('start', 'all_images_assets/start_assets/start.png');
@@ -24,8 +26,14 @@ function preload() {
   this.load.image('hair_kevin', 'all_images_assets/customer_assets/hair_kevin.png');
   this.load.image('stare_kevin', 'all_images_assets/customer_assets/stare_kevin.png');
 
+  //order station related images
+  this.load.image('order_screen', 'all_images_assets/order_assets/order.png');
+  this.load.image('counter', 'all_images_assets/order_assets/counter.png');
+  this.load.image('menu', 'all_images_assets/order_assets/menu.png');
+  this.load.image('speech', 'all_images_assets/order_assets/bubble_R.png');
+  this.load.image('cook', 'all_images_assets/order_assets/cook.png');
 
-  //images for all 6 meat types
+//images for all 6 meat types
   this.load.image('chicken', 'all_images_assets/menu_assets/meat/chicken.png');
   this.load.image('ground_beef', 'all_images_assets/menu_assets/meat/beef.png');
   this.load.image('pork', 'all_images_assets/menu_assets/meat/pork.png');
@@ -87,7 +95,6 @@ function preload() {
   this.load.image('4_star', 'all_images_assets/star_system_assets/4-star.png');
   this.load.image('5_star', 'all_images_assets/star_system_assets/5-star.png');
 
-
   //imgaes for chopping station
   this.load.image('cutting_board', 'all_images_assets/cutting_assets/chop_chop.png');
   this.load.image('radical', 'all_images_assets/cutting_assets/radical.png');
@@ -115,7 +122,7 @@ function preload() {
   this.load.image('counter_top', 'all_images_assets/ingredients_assets/counter_top.png');
   this.load.image('food_tray', 'all_images_assets/ingredients_assets/food_tray.png');
   this.load.image('bowl', 'all_images_assets/ingredients_assets/pot.png');
-
+ 
   //audio files
   this.load.audio('music', ['music_assets/start.mp3']);
 }
@@ -144,8 +151,8 @@ function create() {
   kevin_list.push('stare_kevin')
   gameState.randomCustomer = Phaser.Utils.Array.GetRandom(kevin_list)
 
-
-  // Random temperature generator... gameState.stove_temp will be changed by the player input and if it is == gameState.random_T , points will be added to star system
+  /* Random temperature generator... gameState.stove_temp will be changed by the player input and if it is == gameState.random_T , points will be added to star system
+  */
   gameState.stove_temp = 0;
   let num_9 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   let num_500 = [0, 100, 200, 300, 400, 500]
@@ -156,7 +163,8 @@ function create() {
   gameState.random_T = (random_500 + by_10)
   console.log(gameState.random_T)
 
-  // determines what part of the game is on ... used to stop kevin head from showing up after the start screen, and will be used in IF statements to control sprites later on
+  /* determines what part of the game is on ... used to stop kevin head from showing up after the start screen, and will be used in IF statements to control sprites later on
+  */
   gameState.scene_number = 1
   gameState.kevin_animation = 1
 
@@ -237,7 +245,6 @@ function create() {
   var bowl = [large, medium, small];
   gameState.random_bowl = Phaser.Utils.Array.GetRandom(bowl)
   console.log(gameState.random_bowl);
-
 
   // All sprites
   // title screen sprites
@@ -351,7 +358,6 @@ function create() {
     counter.setVisible(true);
     gameState.star_system.setVisible(true)
     gameState.speech_bubble.setVisible(true).setInteractive();
-
     gameState.scene_number = 2
   })
 
@@ -387,7 +393,6 @@ function create() {
     gameState.jar_L.setVisible(true).setInteractive(true)
     gameState.jar_P.setVisible(true).setInteractive(true)
     gameState.jar_S.setVisible(true).setInteractive(true)
-
     gameState.scene_number = 3
   })
   // jar on clicks
@@ -395,7 +400,6 @@ function create() {
     jars_info()
     gameState.cut_meat.setTexture('cut_chicken').setVisible(true).setScale(.35)
     gameState.placeholder = 'sliced_bird'
-
   })
 
   gameState.jar_F.on('pointerdown', function (pointer) {
@@ -420,7 +424,6 @@ function create() {
     gameState.chop_mark_1.setPosition('330', '230')
     gameState.chop_mark_5.setPosition('580', '150')
     gameState.placeholder = 'sliced_lamb'
-
   })
 
   gameState.jar_P.on('pointerdown', function (pointer) {
@@ -429,7 +432,6 @@ function create() {
     gameState.chop_mark_2.setPosition('380', '390')
     gameState.chop_mark_5.setPosition('510', '290')
     gameState.placeholder = 'sliced_pork'
-
   })
 
   gameState.jar_S.on('pointerdown', function (pointer) {
@@ -437,9 +439,7 @@ function create() {
     gameState.cut_meat.setTexture('cut_steak').setVisible(true).setScale(.35)
     gameState.chop_mark_2.setPosition('180', '350')
     gameState.placeholder = 'sliced_steak'
-
   })
-
 
   // chop markers
   gameState.chop_mark_1.on('pointerdown', function (pointer) {
@@ -525,7 +525,6 @@ function create() {
 }
 
 function update() {
-
   if (gameState.checked_of1 == true && gameState.checked_of2 == true && gameState.checked_of3 == true && gameState.checked_of4 == true && gameState.checked_of5 == true) {
     gameState.chop_mark_1.setVisible(false)
     gameState.chop_mark_2.setVisible(false)
@@ -553,7 +552,6 @@ function update() {
     gameState.customer.setScale(-0.25, 0.25).setPosition(525, 225)
   }
 
-
   // star point system
   if (gameState.star_points == 0) {
     gameState.star_system.setTexture('0_star')
@@ -573,7 +571,6 @@ function update() {
   if (gameState.star_points == 75) {
     gameState.star_system.setTexture('5_star')
   }
-
 
   // makes start_button go side to side
   if (gameState.rotation == 1) {
@@ -613,9 +610,7 @@ function update() {
       gameState.kevin_popup.y += 0.75;
       if (gameState.kevin_popup)
         if (gameState.kevin_popup.y > 80) {
-
           gameState.kevin_animation = 2
-
         }
     }
     // goes back from top left
@@ -641,7 +636,6 @@ function update() {
       // moves to left side
       if (gameState.kevin_popup.y > 750) {
         gameState.kevin_popup.setPosition(-100, 150).setAngle(90).setScale(1, 1);
-
         gameState.kevin_animation = 5
       }
     }
@@ -672,11 +666,11 @@ function update() {
     if (gameState.kevin_animation == 8) {
       gameState.kevin_popup.x += 1
       // moves back to the top left or beginning point and repeats 
-      if (gameState.kevin_popup.x > 950) {
+      if (gameState.kevin_popup.x > 950) {  
         gameState.kevin_popup.setPosition(200, -200).setScale(1, 1).setAngle(180)
         gameState.kevin_animation = 1
-      }
     }
+      }
     // Stop here
   }
 }
@@ -702,5 +696,4 @@ const config = {
     update
   }
 };
-
 const game = new Phaser.Game(config);
