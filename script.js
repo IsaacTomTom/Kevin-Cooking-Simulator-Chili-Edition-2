@@ -7,7 +7,6 @@ const gameState = {
 };
 
 
-
 function preload(){
   //Start screen images
   this.load.image('title_screen', 'all_images_assets/start_assets/title.png');
@@ -153,6 +152,7 @@ function create() {
 
   /* Random temperature generator... gameState.stove_temp will be changed by the player input and if it is == gameState.random_T , points will be added to star system
   */
+  
   gameState.stove_temp = 0;
   let num_9 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   let num_500 = [0, 100, 200, 300, 400, 500]
@@ -332,7 +332,6 @@ function create() {
     (0.1)
   tray_sponge = this.add.sprite(360, 455, 'sponge').setVisible(false).setScale(0.1)
 
-
   // Puts these sprites in a list ... somehow this will be used for dragging controls for all at the same time
   food_items = [tray_fettuccine, tray_linguine, tray_macaroni, tray_ramen_noodles, tray_lasagna_noodles, tray_spaghetti, tray_baked_beans, tray_kidney_beans, tray_lima_beans, tray_green_beans, tray_coffee_beans, tray_jelly_beans, tray_apple_sauce, tray_mayo, tray_mustard, tray_sussy_sauce, tray_tomato_sauce, tray_yum_yum_sauce, tray_butter, tray_cheese, tray_sus_meat, tray_radioactive_material, tray_gummy_bears, tray_sponge]
 
@@ -475,6 +474,7 @@ function create() {
     gameState.pot.setVisible(true)
   })
 
+
   // a function for things the jars need
   function jars_info() {
     background.setTexture('cutting_board')
@@ -522,7 +522,6 @@ function create() {
     tray_gummy_bears.setVisible(true)
     tray_sponge.setVisible(true)
   }
-}
 
 function update() {
   if (gameState.checked_of1 == true && gameState.checked_of2 == true && gameState.checked_of3 == true && gameState.checked_of4 == true && gameState.checked_of5 == true) {
@@ -666,6 +665,7 @@ function update() {
     if (gameState.kevin_animation == 8) {
       gameState.kevin_popup.x += 1
       // moves back to the top left or beginning point and repeats 
+
       if (gameState.kevin_popup.x > 950) {  
         gameState.kevin_popup.setPosition(200, -200).setScale(1, 1).setAngle(180)
         gameState.kevin_animation = 1
@@ -696,4 +696,5 @@ const config = {
     update
   }
 };
+
 const game = new Phaser.Game(config);
